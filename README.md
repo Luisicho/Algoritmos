@@ -183,3 +183,5 @@ function merge<T>(left: T[], right: T[]): T[] {
     .concat(right.slice(rightIndex));
 }
 ```
+#### Algoritmos voraces
+Los algoritmos voraces consisten en una estrategia de búsqueda que sigue una heurística en la que se elige la mejor opción óptima en cada paso local con el objetivo de llegar a una solución general óptima. Normalmente se utilizan para resolver problema de optimización.
