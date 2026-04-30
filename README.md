@@ -60,3 +60,126 @@ function busquedaBinaria(arr: number[], objetivo: number): number {
     return -1; // Elemento no encontrado
 }
 ```
+#### Algoritmos de ordenamiento
+Esros algoritmos reorganizan los elementos de un listado según su relación de orden. La forma más habitual de ordenar son por medio de criterios numericos u orden lexicográfico. Si se ordena de forma eficiente se facilita la busqueda y los resultados legibles para usuarios asi como maquinas.
+algunos algoritmos de ordenamiento son:
+* **Ordenamiento de burbuja:** Compara cada elemento de la lista a ordenar con el siguiente e intercambia su posición si no está en el orden adecuado. Se revisa varias veces toda la lista hasta que no se necesiten más intercambios
+Codigo ejemplo
+```ts
+function bubbleSort(arr: number[]): number[] {
+  const n = arr.length;
+  // Bucle externo para recorrer todo el arreglo
+  for (let i = 0; i < n; i++) {
+    // Bucle interno para comparar elementos adyacentes
+    // -i porque los últimos 'i' elementos ya están ordenados
+    for (let j = 0; j < n - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        // Intercambio de elementos
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+  return arr;
+}
+```
+* **Ordenamiento por selección:** Vamos colocando el elemento más pequeño disponible en cada una de las posiciones de la lista de fomra consecutiva.
+```ts
+function selectionSort(arr: number[]): number[] {
+    const n = arr.length;
+
+    for (let i = 0; i < n - 1; i++) {
+        // Buscar el mínimo en la parte no ordenada
+        let minIndex = i;
+        for (let j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        // Intercambiar el mínimo encontrado con el primer elemento
+        if (minIndex !== i) {
+            [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+        }
+    }
+    return arr;
+}
+```
+
+* **Ordenamiento rápido(Quick sort):** Elegimos un elemento del conjunto (pivote) y reubicamos el resto a cada uno de sus lados, en función de si son mayores o menores que el elemento que estamos tomando como referencia. Repetimos el procedimiento en cada subconjunto.
+```ts
+function quickSort(arr: number[], left: number = 0, right: number = arr.length - 1): number[] {
+  if (left < right) {
+    const pivotIndex = partition(arr, left, right);
+    
+    // Recursively sort elements before and after partition
+    quickSort(arr, left, pivotIndex - 1);
+    quickSort(arr, pivotIndex + 1, right);
+  }
+  return arr;
+}
+
+/**
+ * Helper function to partition the array
+ */
+function partition(arr: number[], left: number, right: number): number {
+  // Choosing the last element as the pivot
+  const pivot = arr[right];
+  let i = left - 1;
+
+  for (let j = left; j < right; j++) {
+    if (arr[j] <= pivot) {
+      i++;
+      // Swap elements
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+  }
+
+  // Swap the pivot element to its correct position
+  [arr[i + 1], arr[right]] = [arr[right], arr[i + 1]];
+  return i + 1;
+}
+```
+
+* **Ordenamiento mezcla (Mergue sort):** La forma en como este metodo ordena un arreglo es dividiendo el problema en problemas pequeños, una ves creados los problemas pequeños comparamos cada uno de estos elementos y verificamos la condicion deseada, utilizando recursividad y una funcion que apoya el mezclar y el dividir los objetos del array.
+
+```ts
+function mergeSort<T>(arr: T[]): T[] {
+  // Base case: arrays with 0 or 1 element are already sorted
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  // Divide: find the middle and split the array into two halves
+  const middle = Math.floor(arr.length / 2);
+  const left = arr.slice(0, middle);
+  const right = arr.slice(middle);
+
+  // Conquer: recursively sort both halves and merge them
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+/**
+ * Helper function to merge two sorted arrays
+ */
+function merge<T>(left: T[], right: T[]): T[] {
+  const result: T[] = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+
+  // Compare elements and add the smaller one to the result
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  // Concatenate any remaining elements
+  return result
+    .concat(left.slice(leftIndex))
+    .concat(right.slice(rightIndex));
+}
+```
