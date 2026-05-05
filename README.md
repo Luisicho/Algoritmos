@@ -185,3 +185,43 @@ function merge<T>(left: T[], right: T[]): T[] {
 ```
 #### Algoritmos voraces
 Los algoritmos voraces consisten en una estrategia de búsqueda que sigue una heurística en la que se elige la mejor opción óptima en cada paso local con el objetivo de llegar a una solución general óptima. Normalmente se utilizan para resolver problema de optimización.
+
+##### Algoritmo de Dijkstra
+Es utilizado para determinar el camino más corto desde un vértice origen hasta los demás vértices de un grafo, que tiene pesos en cada arista
+
+```ts
+function dijkstra(grafo: Grafo, inicio: string): { [nodo: string]: number } {
+    const distancias: { [nodo: string]: number } = {};
+    const visitados: Set<string> = new Set();
+    const colaPrioridad: { nodo: string; distancia: number }[] = [];
+
+    // Inicializar distancias a infinito
+    for (const nodo in grafo) {
+        distancias[nodo] = Infinity;
+    }
+    distancias[inicio] = 0;
+    colaPrioridad.push({ nodo: inicio, distancia: 0 });
+
+    while (colaPrioridad.length > 0) {
+        // Ordenar y extraer el nodo con la distancia más corta (simulando cola de prioridad)
+        colaPrioridad.sort((a, b) => a.distancia - b.distancia);
+        const { nodo: nodoActual, distancia: distActual } = colaPrioridad.shift()!;
+
+        if (visitados.has(nodoActual)) continue;
+        visitados.add(nodoActual);
+
+        // Explorar vecinos
+        for (const vecino in grafo[nodoActual]) {
+            const peso = grafo[nodoActual][vecino];
+            const nuevaDistancia = distActual + peso;
+
+            if (nuevaDistancia < distancias[vecino]) {
+                distancias[vecino] = nuevaDistancia;
+                colaPrioridad.push({ nodo: vecino, distancia: nuevaDistancia });
+            }
+        }
+    }
+
+    return distancias;
+}
+```
