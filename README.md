@@ -225,3 +225,10 @@ function dijkstra(grafo: Grafo, inicio: string): { [nodo: string]: number } {
     return distancias;
 }
 ```
+## Handler
+### ¿Que es un Handle?
+Es un termino que significa cosas diferentes segun el contexto en donde se utiliza.
+
+Un "**_handler_**" (manejador) es un termino generico que se refiere a _una subrutina la cual maneja algo._ Normalmente los "**_handler_**" son funciones _callback_ que manejan eventos del programa, por ejemplo cuando se realiza un "click de raton" existe un "**_event handler_**" que capta, utiliza e interactua con el evento mencionado, para realizar cualquier accion que el script necesite.
+
+Un "**_handle_**" (identificador) es normalmente una forma de referirse a un objeto, solamente que en esta situacion el "**_hanfle_**" funge como una direccion al objeto, similar a cuando visitas el supermercado y debes de dejar tu mochila en recepción, para que ellos te entregen una tarjeta con el numero donde se encuentra tu mochila, el "**_handle_**" seria la tarjeta con el numero de tu mochila.
