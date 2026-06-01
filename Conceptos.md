@@ -30,3 +30,55 @@ La sentencia _ifelse_ es un bloque de control o estructura de control, permite l
     val2
   }
 ```
+
+## Var, Let y Const
+Estas palabras reservadas se utilizan para declarar variables dentro del codigo JavaScript, su uso esta muy relacionado a su _Alcance_ (Scope)
+
+```js
+  var obj1;
+  let obj2;
+  const obj3;
+```
+### Var
+Esta palabra reservada cuenta con un alcance de función, en palabras sencillas cuando es declarada este valor se podra utilizar en cualquier parte del codigo mientras se encuentre dentro de la función donde se declaro `var`
+
+```js
+  funtion () {
+    var a = "hola";
+    console.log(a); // Imprime "hola" en consola
+  }
+    console.log(a); // Error no se declaro la variable a
+
+// Ejemplo como variable global o declaración de variable en el contexto
+
+  var a = "hola";
+  funtion () {
+    console.log(a); // Imprime "hola" en consola
+  }
+
+  console.log(a); // Imprime "hola" en consola
+```
+
+De esta manera la palabra reservada `var` crea variables que perduran en una función, cuenta con caracteristicas muy especiales como lo es el __hoisting__ 
+#### Hoisting
+Este es un comportamiento del los contextos de ejecución de JavaScript donde las declaraciones de variables y funciones son movidas a la parte superior del codigo para ser ejecutadas primero (de forma coloquial). Tecnicamente las variables y funciones son asignadas a la memoria durante la fase de compilación, esto genera que se puedan utilizar en cualquier parte del codigo y declarar en cualquier parte del codigo o contexto, ya que al ser cargadas con anterioridad en memoria su uso no se limita dentro del codigo.
+
+```js
+  funtion () {
+    console.log(a); // Imprime Indefinido en consola, pero a ya existe dentro del codigo como indefinido
+    var a = "hola";
+    console.log(a); // Imprime "hola" en consola, ya que se acaba de asignar valor a la variable a
+  }
+  console.log(a); // Error no se declaro la variable a
+
+// Ejemplo como variable global o declaración de variable en el contexto
+
+  funtion () {
+    console.log(a); // Imprime Indefinido en consola, pero a ya existe dentro del codigo como Indefinido
+    a = "adios" 
+    console.log(a); // Imprime "adios" en consola, ya que se acaba de asignar valor a la variable a
+  }
+  var a = "hola"; // como si se escribe a = "hola"
+  console.log(a); // Imprime "hola" en consola, ya que se acaba de asignar valor a la variable a
+```
+
