@@ -81,4 +81,10 @@ Este es un comportamiento del los contextos de ejecución de JavaScript donde la
   var a = "hola"; // como si se escribe a = "hola"
   console.log(a); // Imprime "hola" en consola, ya que se acaba de asignar valor a la variable a
 ```
+La declaración de una variable con la palabra reservada `var` solamente ocurre una vez, el uso repetido de la declaración de una variable con el mismo nombre solamente se someterá a una asignacion nueva
 
+```js
+  var a = "hola"; // Se declara a como igual a "hola"
+  var a = "adios"; // Se asigna a la variable a el valor de "adios"
+  var a = "no"; // es similara a escribir en codigo a = "no"
+```
