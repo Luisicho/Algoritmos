@@ -112,3 +112,10 @@ Uno de los arboles mas comunes son los Binary Tree (Arboles Binarios) estos arbo
 |  2   | 3  |   |  1 | 4  |  | 
 |     |   |  |   | 4  |4  | 
 
+## Grafos
+Esta estructura es no lineal y une a objetos para formar estructuras complejas, cuentan con nodos (node) y ramas (edges) solamente que a diferencia de un arbol estos se unen y pueden volverse a unir entre distintos nodos, tecnicamente una lista y un arbol son grafos con caracteristicas delimitadas. Sus ramas pueden ser direccionadas o no direccionadas, asi como tambien pueden ser recursivas que se apunten a si mismas.
+Sus caracteristicas son:
+Graphs:
+- Traversal/Search: O(V + E) (V: numerio de vertices, E: numero de ramas)
+- Insertion: O(1)
+- Deletion: O(1)
