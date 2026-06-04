@@ -104,11 +104,11 @@ Sus caracteristicas principales son:
 - Deletion: O(log n)
 - Nodos se conectan con ramas; Nodo raiz, conexiones padre-hijo
 
-Uno de los arboles mas comunes son los Binary Tree (Arboles Binarios) estos arboles cuentan con una conexion no mayor a 2 ramas que a su vez se conectan a 1 solo nodo por rama. Son muy utilizados en ejercicios de programación.
+Uno de los arboles mas comunes son los Binary Tree (Arboles Binarios) estos arboles cuentan con una conexion no mayor a 2 ramas que a su vez se conectan a 1 solo nodo por rama, ademas los nodos de la deecha son mayores a su nodo padre y los izquierdos son menores a su nodo padre. Son muy utilizados en ejercicios de programación.
 
 |   |   | 10 |  | |   |
 | :--- | :---: | ---: | :--- | :---: | ---: |
 |     | 5  |  | 5  |   |  | 
-|  3   | 2  |   |  1 | 4  |  | 
+|  2   | 3  |   |  1 | 4  |  | 
 |     |   |  |   | 4  |4  | 
 
