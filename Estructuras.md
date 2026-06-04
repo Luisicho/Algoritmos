@@ -93,3 +93,22 @@ Queues:
 - Enqueue: O(1)
 - Dequeue: O(1)
 - Front: O(1)
+
+## Trees (Arboles)
+Los arboles son estructuras de datos jerarquicos, donde existes Nodos (nodes) y ramas (edges), tambien existe un nodo raiz (Root), cuando los nodos son unidos por las ramas se forma una figura similara un arbol. Los nodos dependen de su nodo padre, esta es otra forma de referirse al nodo superiro a ellos, "el nodo padre tiene nodos hijos".
+Sus caracteristicas principales son:
+
+ Trees:
+- Read/Search: O(log n)
+- Insertion: O(log n)
+- Deletion: O(log n)
+- Nodos se conectan con ramas; Nodo raiz, conexiones padre-hijo
+
+Uno de los arboles mas comunes son los Binary Tree (Arboles Binarios) estos arboles cuentan con una conexion no mayor a 2 ramas que a su vez se conectan a 1 solo nodo por rama. Son muy utilizados en ejercicios de programación.
+
+|   |   | 10 |  | |   |
+| :--- | :---: | ---: | :--- | :---: | ---: |
+|     | 5  |  | 5  |   |  | 
+|  3   | 2  |   |  1 | 4  |  | 
+|     |   |  |   | 4  |4  | 
+
