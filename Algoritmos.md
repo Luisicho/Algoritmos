@@ -35,3 +35,13 @@ Insertion Sort:
 - Runtime:
   - Mejor caso: O(n) cuando la lista ya eta ordenada
   - Peor caso: O(n^2) cuando la lista no tiene nada ordenado  
+
+### Merge Sort
+Este algoritmo ordena separando el arreglo en arreglos mas pequeños, separa un arreglo a la mitad hasta llegar a un arreglo con 2 elementos los cuales se comparan para ver cual es mayor, luego se intercambian si esto es verdad, despues vuelve a unir los arreglos separados y crea arreglos mas grandes que vuelven a compararse hasta llegar al arreglo principal que es mas facil de ordenar.
+Sus caracteristicas son:
+Merge Sort:
+- Un "divide y venceras" este algoritmo rompe el problema en problemas más pequeños y los resuelve recursivamente
+- Inicia diviendo un arreglo en subarreglos mas sencillos
+- Mescla los subarreglos y los compara para colocarlos de una forma ordenada
+- Continua mesclando los subarreglos hasta conseguir todo el arreglo ordenado
+- Runtime: O(n log(n)) en ambos casos peor y mejor, haciendolo eficiente con bases de datos grandes
