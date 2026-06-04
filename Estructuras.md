@@ -71,3 +71,25 @@ Esta estructura escencialmente es como la de un Array donde tenemos a un objeto 
 |  Value | =>  | 12 | 10 | 37  | 54  |
 | :--- | :---: | ---: | :--- | :---: | ---: |
 |   Key  |  => | "gato" | "perro"  | "loro"  | "mono"  | 
+
+Sus caracteristicas principales son:
+HashMaps:
+- Read: O(1)
+- Insertion: O(1)
+- Deletion: O(1)
+- Similar a Arreglos pero con identificadores (index) con nombres; sin orden y de rapida busqueda
+
+## Staks (Pilas)
+Es una estructura Last In-First Out (LIFO) esta estructura cuenta con funciones similares a la inserción y eliminación, estas son Push que añade elementos a la pila, Pop que elimina el ultimo elemento de la fila, Peak que revisa el ultimo elemento añadido de la pila, funciona asi como una pila de hotcakes, para comerla el ultimo de los hotcakes sera el primero en comerse. Sus caracteristicas principales son:
+Stacks:
+- Push: O(1)
+- Pop: O(1)
+- Peak: O(1)
+
+## Queue (Filas)
+Esta estructura se concidera First In-First Out (FIFO), esta estructura cuenta con funciones Enqueue que añade un elemento al principio de la fila, Dequeue que elimina el primer archivo agregado a la fila y Front que revisa cual es el primer archivo agragado a la fila, si lo comparamos con una fila en un supermercado tiene una funcionalidad igual, los primeros clientes en llegar serán los primeros en ser atendidos, sus caracteristicas son:
+
+Queues:
+- Enqueue: O(1)
+- Dequeue: O(1)
+- Front: O(1)
