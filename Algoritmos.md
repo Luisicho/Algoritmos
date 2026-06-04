@@ -45,3 +45,17 @@ Merge Sort:
 - Mescla los subarreglos y los compara para colocarlos de una forma ordenada
 - Continua mesclando los subarreglos hasta conseguir todo el arreglo ordenado
 - Runtime: O(n log(n)) en ambos casos peor y mejor, haciendolo eficiente con bases de datos grandes
+
+### Quick Sort
+Este algoritmo ordena mediante un pivote, este debe ser la mitad del arreglo, se compara con los elementos del arreglo y los separa mayores y menores al pivote, despues vuelve a ocurrir esto dentro de los arreglos separados recursivamente, asta tener nuestro arreglo ordenado.
+Sus caracteristicas son:
+Quick Sort:
+- Un algoritmo complejo que sigue el ejemplo de "divide y venceras" y es recursivo
+- Selecciona un pivote, idealmente el centro del arreglo, y divide en dos subarrays uno mayor al pivote y otro menor al pivote
+- Continua recursivamente este proceso con cada subarreglo hasta tener el arreglo ordenada.
+- Utiliza el pivote y lo mueve al final del array, luego apunta al primero y penultimo elemento del array
+- Compara los elementos y si uno es mayor los intercambia hasta que los dos apuntadores se juntan, aqui el primer pivote es intercambiado en la posición donde los dos apuntadores se intercambiaron
+- Ya tenemos las sublistas con los numeros mayores y menores al pivote, ahora se realiza lo mismo en las sublistas mayores y menores al pivote
+- Runtime:
+  - Mejor caso: O(b log(n)), cuando el pivote divide consistentemente la lista en partes iguales
+  - Peor caso: O(n^2), cuando el pivote seleccionado crea constantemente divisiones desbalanceadas
