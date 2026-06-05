@@ -79,6 +79,19 @@ HashMaps:
 - Deletion: O(1)
 - Similar a Arreglos pero con identificadores (index) con nombres; sin orden y de rapida busqueda
 
+Existen funciones para HashMaps muy utilez, las explicare por aqui
+### Filter
+Esta funcion filtra los objetos de un HashMap segun las condiciones especificadas, cada objeto dentro del HashMap se somete a este filtro y si resulta ser verdadero es elegido para ser parte del nuevo HashMap.
+
+```js
+  let numeros = new Map([1,2,3,4,5,6]);
+
+  // Se filtan los numeros (num) mayores a 4
+  let filtroNumeros = numeros.filter(num => num > 4);
+
+  console.log(filtroNumeros); // Imprime [5,6] los mayores a 4
+```
+
 ## Staks (Pilas)
 Es una estructura Last In-First Out (LIFO) esta estructura cuenta con funciones similares a la inserción y eliminación, estas son Push que añade elementos a la pila, Pop que elimina el ultimo elemento de la fila, Peak que revisa el ultimo elemento añadido de la pila, funciona asi como una pila de hotcakes, para comerla el ultimo de los hotcakes sera el primero en comerse. Sus caracteristicas principales son:
 Stacks:
