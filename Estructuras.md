@@ -91,6 +91,18 @@ Esta funcion filtra los objetos de un HashMap segun las condiciones especificada
 
   console.log(filtroNumeros); // Imprime [5,6] los mayores a 4
 ```
+### Reduce
+Esta funcion reune o recopila todos los elementos de un HashMap en un solo elemento.
+
+```js
+  let numeros = new Map([1,2,3,4,5,6]);
+
+  // En este caso suma los numeros hasta hacer uno solo
+  // El primer parametro es la función que se repetira el segundo es el valor inicial del total
+  let sumTotal = numeros.reduce((total, curNum)=>{return total + curNum},0);
+
+  console.log(sumTotal); // Imprime 21 que es la suma del arreglo 1+2+3+4+5+6
+```
 
 ## Staks (Pilas)
 Es una estructura Last In-First Out (LIFO) esta estructura cuenta con funciones similares a la inserción y eliminación, estas son Push que añade elementos a la pila, Pop que elimina el ultimo elemento de la fila, Peak que revisa el ultimo elemento añadido de la pila, funciona asi como una pila de hotcakes, para comerla el ultimo de los hotcakes sera el primero en comerse. Sus caracteristicas principales son:
