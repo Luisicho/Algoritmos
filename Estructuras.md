@@ -58,6 +58,13 @@ Sort: Ordena el array por defecto con su unicode convirtiendo todo a string, per
   nums.sort((a,b) => a - b); // Ordena
   console.log(nums); // Imprime [0, 1, 2, 3]
 ```
+Map: Crea un HashMap del arreglo, para poder ejecutar en cada elemento una funcion especifica
+```js
+  let nums = [1, 3, 2, 0]
+  // Ejecuta en cada elemento del Array la suma de +1
+  nums.map((n) => {return n + 1;});
+  console.log(nums); // Imprime [2, 4, 3, 1]
+```
 
 ## Linked Lists
 Son similares a un Array ya que siguen guardando listas ordenadas de elementos, sin embargo cuentan con una diferencia grande cuando se habla de almacenar los elementos en memoria, una lista cuenta con algo que se llama apuntador (pointer) es basicamente el elemento que se esta seleccionando o haciendo énfasis dentro de la lista. 
