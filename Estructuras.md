@@ -50,6 +50,14 @@ Slice: Crea una copia identica de un Array
   console.log(copyArray); // Imprime ["melon"]
   console.log(frutas); // Imprime ["melon"]
 ```
+Sort: Ordena el array por defecto con su unicode convirtiendo todo a string, pero puede colocarse una condición que maneje el orden
+```js
+  let nums = [1, 3, 2, 0]
+  // Si la condición es mayor a 0 significa que la variable a es mayor que b
+  // Si la condición es menor a 0 significa que la variable b es mayor que a
+  nums.sort((a,b) => a - b); // Ordena
+  console.log(nums); // Imprime [0, 1, 2, 3]
+```
 
 ## Linked Lists
 Son similares a un Array ya que siguen guardando listas ordenadas de elementos, sin embargo cuentan con una diferencia grande cuando se habla de almacenar los elementos en memoria, una lista cuenta con algo que se llama apuntador (pointer) es basicamente el elemento que se esta seleccionando o haciendo énfasis dentro de la lista. 
