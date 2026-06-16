@@ -108,3 +108,23 @@ Esta palabra reservada cuenta con un alcance de función y de bloque, esto quier
       console.log(a); // Error no se declaro la variable a
   }
 ```
+
+### Const
+Esta palabra reservada cuenta con un alcance de función y de bloque, esto quiere decir que la variable solamente existirá dentro de una funcion o un bloque de funcion. la particularidad de esta palabra es que asigna un valor constante a una variable, no se pueden redeclarar, ni modificar en condiciones normales.
+```js
+  funtion () {
+    const a = "hola";
+    console.log(a); // Imprime "hola" en consola
+  }
+    console.log(a); // Error no se declaro la variable a
+
+// Ejemplo como variable bloque
+
+  funtion () {
+    if(b == true){
+      const a = "Adios"
+      console.log(a); // Imprime "Adios" en consola
+    }
+      console.log(a); // Error no se declaro la variable a
+  }
+```
