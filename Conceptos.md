@@ -31,6 +31,36 @@ La sentencia _ifelse_ es un bloque de control o estructura de control, permite l
   }
 ```
 
+## Operador de propagación
+Existe un operador que separa los elemento de un array `...` este operador es una forma sencilla de hacer `split` a un arreglo, el trabajo de `...` es **Propagacion o Desempaquetado** basicamente elimina todo corchete de un arreglo o separa elementos de un string para crear un objeto desempaquetado.
+
+```js
+let arr = ["mano", "pie"];
+let arr2 = ["cabeza", ...arr, "zapato"];
+
+console.log(arr2) // Imprime ["cabeza", "mano", "pie", "zapato"]
+```
+Se puede utilizar incluso par copiar array silimar a split
+```js
+let arr = [[1],[2],[3]];
+let copyarr = [...arr]; // Como usar arr.split("")
+
+console.log(copuarr); //Imprime [[1],[2],[3]]
+```
+Remplaza el suo de apply en funciones, divide los elemento para encajar en una función
+```js
+function myfuncion(x,y,z){}
+let arr = [1,2,3]
+myfuncion(...arr) // Como usar myfuncion.apply(null, arr);
+```
+Tambien puede usarse muchas veces dentro de una funcion ademas de separa un array y dejar un resultado util para la funcion
+```js
+function myfuncion(x,y,z,a,b,c){}
+let arr = [1,2,3]
+myfuncion(0, ...arr,4, ...[5]) // los parametros serian myfuncion(0,1,2,3,4,5)
+```
+
+
 ## Var, Let y Const
 Estas palabras reservadas se utilizan para declarar variables dentro del codigo JavaScript, su uso esta muy relacionado a su _Alcance_ (Scope)
 
