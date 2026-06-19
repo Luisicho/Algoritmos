@@ -13,7 +13,7 @@ El array coloca un identificador (index) a sus objetos para poder mandarlos llam
 ```
 Array cuenta con funciones utilez a la hora de manejar su colección estas son:
 ### Push
-Añade un nuevo objeto al final de Array
+Añade un nuevo objeto al final de Array y devuleve el nuevo tamaño del arreglo.
 ```js
   let nuevaFruta = frutas.push("naranja"); 
 
@@ -83,6 +83,16 @@ Retorna el valor del primer elemento que se encuentre con una condicion o expres
   let newNum = nums.find((element) => element > 2); // Busca el numero mayor a 2 y lo retorna
 
   console.log(newNum); // Imprime 3
+```
+### At
+Retorna un elemento en la posicion que se especifica.
+```js
+  let nums = [1, 3, 2, 0]
+
+  console.log(numero `${nums.at(1)}`); // Imprime 3
+  console.log(numero `${nums.at(0)}`); // Imprime 1
+  console.log(numero `${nums.at(-1)}`); // Imprime 0
+  console.log(numero `${nums.at(-2)}`); // Imprime 2
 ```
 
 ## Linked Lists
