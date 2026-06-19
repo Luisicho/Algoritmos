@@ -110,6 +110,31 @@ En esta situación 12 tiene un espacio grande de vacios hacia 54, para ello la l
 - Deletion: O(1)
 - Lento para lectura pero muy eficiente en inserción y eliminación.
 
+### Uso Practico
+Esta estrucutra cuenta con funciones interesantes, aqui colocaré unos ejemplos para uso practico de la estructura
+
+#### Insertar
+Para insertar en una extructura así se necesita remplazar el elemento apuntado por el que buscamos insertar
+```js
+  let numeros = new ListNode();
+
+  numeros = 1; // Se agrega 1 al primer nodo de la lista
+  numeros.next; // Se mueve al proximo nodo de la lista, dejando a 1 atras
+
+  console.log(numeros.val) // Imprime null que es el valor de un nodo nuevo
+```
+Para poder insertar en una nueva lista de nodos sin recorrer el nodo se utilizan los punteros, los cuales se moveran al proximo nodo sin que el apuntador principal se vea afectado
+
+```js
+  let numeros = new ListNode(); // Se crea nodo con su apuntador numeros
+  let puntero = numeros; // Se crea nuevo apuntador que apunta al principio de la lista de nodos
+
+  puntero = 1; // Se agrega 1 al primer nodo de la lista
+  puntero.next; // Se mueve al proximo nodo de la lista, dejando a 1 atras
+
+  console.log(numeros.val) // Imprime 1 que es el nodo al que se agrego
+  console.log(puntero.val) // Imprime Null que es el nodo nuevo de la lista de nodos
+```
 ## HashMaps
 Esta estructura escencialmente es como la de un Array donde tenemos a un objeto y ademas un indice (index) que representa la posición del objeto dentro del Arreglo, con un HashMap contamos con un objeto o Value y un indice o Key, comunmente llamados Key-Value Pairs
 |  Value | =>  | 12 | 10 | 37  | 54  |
