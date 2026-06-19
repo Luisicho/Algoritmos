@@ -167,6 +167,23 @@ Es una cadena de caracteres inmutable, o sea no puede modificarse a menos que se
 
   console.log(cadena); // imprime "hola"
 ```
+Puede declararse de varias formas pero es importante recordar que existe la forma primitiva utilizando los tipos de datos primitivos, y la creacion de un objeto String, en Javascript ambos son tomados como objetos String, pero eso lo facilita el compilador y no significa que sean iguales.
+```js
+  let cadena = "hola"
+  let cadena2 = 'de nuevo hola'
+  let cadena3 = `mas holas`
+
+  const str = "hola" // forma primitiva de declarar
+
+  const str2 = new String("hola"); // forma correcta de declarar
+```
+El objeto String cuenta con propiedades y funciones, la unica propiedad con la que cuenta es _length_ esta retorna el tamaño de la cadena y cuenta con 34 funciones para string.
+```js
+  let str = "hola";
+
+  console.log(str.length); // Imprime 4
+```
+
 ### Replace
 Es utilizado cuando quieres remplazar un substring dentro de un string, tambien funciona colocando expresiones regulares y colocando el parametro que quieres remplazar luego del parametro que se remplazá. Esto ocurre solamente con un solo parametro el primero que se encuentre.
 ```js
