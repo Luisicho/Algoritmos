@@ -12,45 +12,52 @@ El array coloca un identificador (index) a sus objetos para poder mandarlos llam
   console.log(frutas[0]); // Imprime "melon"
 ```
 Array cuenta con funciones utilez a la hora de manejar su colección estas son:
-Push: Añade un nuevo objeto al final de Array
+### Push
+Añade un nuevo objeto al final de Array
 ```js
   let nuevaFruta = frutas.push("naranja"); 
 
   console.log(frutas); // Imprime ["melon","sandia","fresa","naranja"]
 ```
-Pop: Elimina el ultimo objeto del Array
+### Pop
+Elimina el ultimo objeto del Array y devuele el elemento eliminado.
 ```js
   let frutaEliminada = frutas.pop(); // Elimina a "naranja"
 
   console.log(frutas); // Imprime ["melon","sandia","fresa"]
 ```
-Unshift: Añade un nuevo objeto al principio del Array
+### Unshift
+Añade un nuevo objeto al principio del Array
 ```js
   let nuevaFruta = frutas.unshift("piña"); 
 
   console.log(frutas); // Imprime ["piña,"melon","sandia","fresa"]
 ```
-Shift: Elimina el primer objeto del Array
+### Shift
+Elimina el primer objeto del Array
 ```js
   let frutaEliminada = frutas.shift("piña"); // Eliminó "piña"
 
   console.log(frutas); // Imprime ["melon","sandia","fresa"]
 ```
-Splice: Elimina de un Arreglo los objetos para crear un nuevo Arreglo con los objetos eliminados, se especifica la posición y la cantidad de objetos a eliminar
+### Splice
+Elimina de un Arreglo los objetos para crear un nuevo Arreglo con los objetos eliminados, se especifica la posición y la cantidad de objetos a eliminar
 ```js
   let frutaEliminada = frutas.splice(1,2); // Eliminó "sandia","fresa" del arreglo
 
   console.log(FrutaEliminada); // Imprime ["sandia","fresa"]
   console.log(frutas); // Imprime ["melon"]
 ```
-Slice: Crea una copia identica de un Array
+### Slice
+Crea una copia identica de un Array
 ```js
   let copyArray = frutas.slice; // Se copio Frutas
 
   console.log(copyArray); // Imprime ["melon"]
   console.log(frutas); // Imprime ["melon"]
 ```
-Sort: Ordena el array por defecto con su unicode convirtiendo todo a string, pero puede colocarse una condición que maneje el orden
+### Sort
+Ordena el array por defecto con su unicode convirtiendo todo a string, pero puede colocarse una condición que maneje el orden
 ```js
   let nums = [1, 3, 2, 0]
   // Si la condición es mayor a 0 significa que la variable a es mayor que b
@@ -58,12 +65,24 @@ Sort: Ordena el array por defecto con su unicode convirtiendo todo a string, per
   nums.sort((a,b) => a - b); // Ordena
   console.log(nums); // Imprime [0, 1, 2, 3]
 ```
-Map: Crea un HashMap del arreglo, para poder ejecutar en cada elemento una funcion especifica
+### Map
+Crea un HashMap del arreglo, para poder ejecutar en cada elemento una funcion especifica
 ```js
   let nums = [1, 3, 2, 0]
   // Ejecuta en cada elemento del Array la suma de +1
   nums.map((n) => {return n + 1;});
   console.log(nums); // Imprime [2, 4, 3, 1]
+```
+### Find
+Retorna el valor del primer elemento que se encuentre con una condicion o expresion regular, su funcion callback contiene 
+* element: El elemento actual que se esta procesando
+* index: El indice del elemento actual que se procesa
+* array: El array desde el cual se esta llamando la función
+```js
+  let nums = [1, 3, 2, 0]
+  let newNum = nums.find((element) => element > 2); // Busca el numero mayor a 2 y lo retorna
+
+  console.log(newNum); // Imprime 3
 ```
 
 ## Linked Lists
