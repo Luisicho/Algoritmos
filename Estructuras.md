@@ -159,3 +159,78 @@ Graphs:
 - Traversal/Search: O(V + E) (V: numerio de vertices, E: numero de ramas)
 - Insertion: O(1)
 - Deletion: O(1)
+# Tipo de datos
+## String
+Es una cadena de caracteres inmutable, o sea no puede modificarse a menos que se utilice una funcion especifica de string
+```js
+  let cadena = "hola"
+
+  console.log(cadena); // imprime "hola"
+```
+### Replace
+Es utilizado cuando quieres remplazar un substring dentro de un string, tambien funciona colocando expresiones regulares y colocando el parametro que quieres remplazar luego del parametro que se remplazá. Esto ocurre solamente con un solo parametro el primero que se encuentre.
+```js
+  let cadena = "hala"
+
+  let nuevaCad = cadena.replace("a", "_");
+
+  console.log(nuevaCad); // imprime "h_la"
+```
+
+```js
+  let cadena = "Mi nombre es luis"
+
+  let nuevaCad = cadena.replace("luis", (match) {
+    return match.toUpperCase();
+  });
+
+  console.log(cadena); // imprime "Mi nombre es LUIS"
+```
+
+### Match
+Es una funcion que sirve para encontrar expresiones regulares dentro de una cadena, devuelve un array con las propiedades
+* Que se buscó (Match)
+* Index de donde esta
+* La expresion completa
+* Que grupo es la expresion regular
+
+```js
+  let cadena = "hola a todos soy luis miguel";
+
+  let macheado = cadena.match("todos");
+
+  console.log(macheado); // retorna objeto
+  /*
+  [
+    "todos",
+    7,
+    "hola a todos soy luis miguel",
+    undefined
+  ]
+  */
+
+```
+
+### Split
+Es utilizado cuando quieres dividir un string en substrings, estos substring se retornan dentro de un array, y no modifica al string original.
+
+```js
+  let cadena = "hola a todos soy luis miguel";
+
+  let macheado = cadena.split(" ");
+
+  console.log(macheado); // Imprime ["hola", "a", "todos", "soy", "luis", "miguel"]
+
+```
+```js
+  let cadena = "miguel";
+
+  let macheado = cadena.split();
+
+  console.log(macheado); // Imprime ["miguel"]
+
+  let macheado2 = cadena.split("");
+
+  console.log(macheado2); // Imprime ["m", "i", "g", "u", "e", "l"]
+
+```
