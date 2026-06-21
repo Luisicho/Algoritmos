@@ -135,6 +135,20 @@ Para poder insertar en una nueva lista de nodos sin recorrer el nodo se utilizan
   console.log(numeros.val) // Imprime 1 que es el nodo al que se agrego
   console.log(puntero.val) // Imprime Null que es el nodo nuevo de la lista de nodos
 ```
+#### Eliminar
+Un nodo dentro de una lista de nodos no se elimina como tal, solamente se apunta a un nodo distinto, esto lo elimina.
+```js
+  /* Mi lista de nodos base es [5,6,7] mi apuntador esta en 5*/
+  let numeros = new ListNode(); // Se crea nodo con su apuntador numeros
+  let puntero = numeros; // Se crea nuevo apuntador que apunta al principio de la lista de nodos
+
+  /* Elimino 6 de los nodos*/
+  puntero.next = puntero.next.next; // Elimino el apuntador de 5 -> 6
+
+  console.log(numeros.val) // Imprime 5 que es el primer nodo
+  console.log(numeros.next.val) // Imprime 7 que es el nodo que sigue de la lista de nodos
+```
+
 ## HashMaps
 Esta estructura escencialmente es como la de un Array donde tenemos a un objeto y ademas un indice (index) que representa la posición del objeto dentro del Arreglo, con un HashMap contamos con un objeto o Value y un indice o Key, comunmente llamados Key-Value Pairs
 |  Value | =>  | 12 | 10 | 37  | 54  |
