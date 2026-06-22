@@ -319,3 +319,20 @@ Es utilizado cuando quieres dividir un string en substrings, estos substring se 
   console.log(macheado2); // Imprime ["m", "i", "g", "u", "e", "l"]
 
 ```
+
+### Trim
+Esta función elimina los espacios vacios antes y despues de un string
+```js
+  let cadena = "      miguel      ";
+
+  let recordato = cadena.trim();
+
+  console.log(recordato); // Imprime ["miguel"]
+
+  let cadena2 = "     luis miguel      ";
+
+  let recordato2 = cadena2.trim();
+
+  console.log(recordato2); // Imprime ["luis miguel"]
+
+```
