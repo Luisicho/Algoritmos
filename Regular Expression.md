@@ -2,8 +2,9 @@
 Las expresiones regulares son sentencias de caracteres que buscan un patron de busqueda, funcionan principalmente para filtrar cadenas invalidas, tambien para validadr estas mismas
 ## Elementos basicos de Expresiones Regulares
 Para expresar una cantidad o segmento valido de una cadena, es importante poder construir la expresion regular, para esto se utilizan caracteres que expresan algo en especificos:
-* Aserciones
+* Aserciones: Indica el inicio o fin de cadena, asi como limites.
   * `^` Indica el inicio de la cadena o linea
+  * `$` Indica el final de la cadena o linea
 
 ### Declaración
 Las expresiones regulares se declaran de 2 formas:
