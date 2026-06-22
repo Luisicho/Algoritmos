@@ -94,6 +94,16 @@ Retorna un elemento en la posicion que se especifica.
   console.log(numero `${nums.at(-1)}`); // Imprime 0
   console.log(numero `${nums.at(-2)}`); // Imprime 2
 ```
+### Join
+Une todos los elementos de un array en una cadena, y devuelve esta cadena nueva unida.
+```js
+  let nombres = ["luis", "miguel", "hernandez"];
+
+  let nuevoNombre = nombres.join(" ");
+
+  console.log(nuevoNombre); // Imprime "luis miguel hernandez"
+  
+```
 
 ## Linked Lists
 Son similares a un Array ya que siguen guardando listas ordenadas de elementos, sin embargo cuentan con una diferencia grande cuando se habla de almacenar los elementos en memoria, una lista cuenta con algo que se llama apuntador (pointer) es basicamente el elemento que se esta seleccionando o haciendo énfasis dentro de la lista. 
