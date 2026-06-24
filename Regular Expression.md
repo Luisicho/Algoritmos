@@ -17,7 +17,10 @@ Para expresar una cantidad o segmento valido de una cadena, es importante poder 
 ```js
   let exp = /\./; // Puede ser .
 ```
-
+Tambien esta barra puede dar significado especial a caracteres como son:
+|  Combinacion |   Significado     |
+| :--- | :---: |
+|  `\t`   |   Representa una tabulador    | 
 
 ### Declaración
 Las expresiones regulares se declaran de 2 formas:
