@@ -197,6 +197,16 @@ Esta funcion reune o recopila todos los elementos de un HashMap en un solo eleme
   console.log(sumTotal); // Imprime 21 que es la suma del arreglo 1+2+3+4+5+6
 ```
 
+### Set
+Esta es la forma de insertar valores a un Map
+
+```js
+  const map1 = new Map();
+  map1.set(`bar`, 1); // Agrega bar con key 1
+
+  console.log(map1); // Imprime { 'bar' => 1 }
+```
+
 ## Staks (Pilas)
 Es una estructura Last In-First Out (LIFO) esta estructura cuenta con funciones similares a la inserción y eliminación, estas son Push que añade elementos a la pila, Pop que elimina el ultimo elemento de la fila, Peak que revisa el ultimo elemento añadido de la pila, funciona asi como una pila de hotcakes, para comerla el ultimo de los hotcakes sera el primero en comerse. Sus caracteristicas principales son:
 Stacks:
