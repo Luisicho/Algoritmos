@@ -104,7 +104,7 @@ Une todos los elementos de un array en una cadena, y devuelve esta cadena nueva 
   console.log(nuevoNombre); // Imprime "luis miguel hernandez"
   
 ```
-
+----------------------------------
 ## Linked Lists
 Son similares a un Array ya que siguen guardando listas ordenadas de elementos, sin embargo cuentan con una diferencia grande cuando se habla de almacenar los elementos en memoria, una lista cuenta con algo que se llama apuntador (pointer) es basicamente el elemento que se esta seleccionando o haciendo énfasis dentro de la lista. 
 Esto implica varias cosas:
@@ -120,10 +120,8 @@ En esta situación 12 tiene un espacio grande de vacios hacia 54, para ello la l
 - Deletion: O(1)
 - Lento para lectura pero muy eficiente en inserción y eliminación.
 
-### Uso Practico
 Esta estrucutra cuenta con funciones interesantes, aqui colocaré unos ejemplos para uso practico de la estructura
-
-#### Insertar
+### Insertar
 Para insertar en una extructura así se necesita remplazar el elemento apuntado por el que buscamos insertar
 ```js
   let numeros = new ListNode();
@@ -145,7 +143,7 @@ Para poder insertar en una nueva lista de nodos sin recorrer el nodo se utilizan
   console.log(numeros.val) // Imprime 1 que es el nodo al que se agrego
   console.log(puntero.val) // Imprime Null que es el nodo nuevo de la lista de nodos
 ```
-#### Eliminar
+### Eliminar
 Un nodo dentro de una lista de nodos no se elimina como tal, solamente se apunta a un nodo distinto, esto lo elimina.
 ```js
   /* Mi lista de nodos base es [5,6,7] mi apuntador esta en 5*/
@@ -158,7 +156,7 @@ Un nodo dentro de una lista de nodos no se elimina como tal, solamente se apunta
   console.log(numeros.val) // Imprime 5 que es el primer nodo
   console.log(numeros.next.val) // Imprime 7 que es el nodo que sigue de la lista de nodos
 ```
-
+----------------------------------
 ## HashMaps
 Esta estructura escencialmente es como la de un Array donde tenemos a un objeto y ademas un indice (index) que representa la posición del objeto dentro del Arreglo, con un HashMap contamos con un objeto o Value y un indice o Key, comunmente llamados Key-Value Pairs
 |  Value | =>  | 12 | 10 | 37  | 54  |
@@ -207,13 +205,24 @@ Esta es la forma de insertar valores a un Map
   console.log(map1); // Imprime { 'bar' => 1 }
 ```
 
+### Has
+Esta es la forma de buscar si un elemento existe dentro de un HashMap, retorna true o false, si lo encuentra o no.
+
+```js
+  const map1 = new Map();
+  map1.set(`bar`, 1); // Agrega bar con key 1
+
+  console.log(map1.has(`bar`)); // Imprime true
+  console.log(map1.has(`bat`)); // Imprime false
+```
+----------------------------------
 ## Staks (Pilas)
 Es una estructura Last In-First Out (LIFO) esta estructura cuenta con funciones similares a la inserción y eliminación, estas son Push que añade elementos a la pila, Pop que elimina el ultimo elemento de la fila, Peak que revisa el ultimo elemento añadido de la pila, funciona asi como una pila de hotcakes, para comerla el ultimo de los hotcakes sera el primero en comerse. Sus caracteristicas principales son:
 Stacks:
 - Push: O(1)
 - Pop: O(1)
 - Peak: O(1)
-
+----------------------------------
 ## Queue (Filas)
 Esta estructura se concidera First In-First Out (FIFO), esta estructura cuenta con funciones Enqueue que añade un elemento al principio de la fila, Dequeue que elimina el primer archivo agregado a la fila y Front que revisa cual es el primer archivo agragado a la fila, si lo comparamos con una fila en un supermercado tiene una funcionalidad igual, los primeros clientes en llegar serán los primeros en ser atendidos, sus caracteristicas son:
 
@@ -221,7 +230,7 @@ Queues:
 - Enqueue: O(1)
 - Dequeue: O(1)
 - Front: O(1)
-
+----------------------------------
 ## Trees (Arboles)
 Los arboles son estructuras de datos jerarquicos, donde existes Nodos (nodes) y ramas (edges), tambien existe un nodo raiz (Root), cuando los nodos son unidos por las ramas se forma una figura similara un arbol. Los nodos dependen de su nodo padre, esta es otra forma de referirse al nodo superiro a ellos, "el nodo padre tiene nodos hijos".
 Sus caracteristicas principales son:
@@ -239,7 +248,7 @@ Uno de los arboles mas comunes son los Binary Tree (Arboles Binarios) estos arbo
 |     | 5  |  | 5  |   |  | 
 |  2   | 3  |   |  1 | 4  |  | 
 |     |   |  |   | 4  |4  | 
-
+----------------------------------
 ## Grafos
 Esta estructura es no lineal y une a objetos para formar estructuras complejas, cuentan con nodos (node) y ramas (edges) solamente que a diferencia de un arbol estos se unen y pueden volverse a unir entre distintos nodos, tecnicamente una lista y un arbol son grafos con caracteristicas delimitadas. Sus ramas pueden ser direccionadas o no direccionadas, asi como tambien pueden ser recursivas que se apunten a si mismas.
 Sus caracteristicas son:
@@ -247,6 +256,8 @@ Graphs:
 - Traversal/Search: O(V + E) (V: numerio de vertices, E: numero de ramas)
 - Insertion: O(1)
 - Deletion: O(1)
+
+----------------------------------
 # Tipo de datos
 ## String
 Es una cadena de caracteres inmutable, o sea no puede modificarse a menos que se utilice una funcion especifica de string
