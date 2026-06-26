@@ -253,11 +253,69 @@ Existen formulas ya utilizadas para poder realizar funciones basicas dentro de l
 
 ### Buscar
 ```js
-
+var existeTree = function(root, value){
+  if(root === null){
+    return false; 
+  } else {
+    inLeft = existeTree(root.left, value);
+    inRight = existeTree(root.right, value);
+    return root.data === data || inLeft || inRight;
+  }
+}
 ```
 ### Intercambiar
-
+```js
+var invertTree = function(root) {
+    if(root == null){
+        return null;
+    } else {
+        invertTree(root.left);
+        invertTree(root.right);
+        [root.left, root.right] = [root.right, root.left];
+        /* IGUAL A
+        let tmp = root.left;
+        root.left = root.right;
+        root.right = tmp; */
+    }
+    return root;
+}
+```
 ### Suma Total
+```js
+var sumaTree = function(root){
+  if(root === null){
+    return 0; 
+  } else {
+    leftSum = sumaTree(root.left);
+    rightSum = sumaTree(root.right);
+    return root.data + leftSum + rightSum;
+  }
+}
+```
+### Buscar Maximo
+```js
+var maxTree = function(root){
+  if(root === null){
+    return -Infinity; 
+  } else {
+    leftMax = maxTree(root.left);
+    rightMax = maxTree(root.right);
+    return Math.max(root.data, leftMax, rightMax);
+  }
+}
+```
+### Altura de Arbol
+```js
+var altTree = function(root){
+  if(root === null){
+    return 0; 
+  } else {
+    leftHeight = altTree(root.left);
+    rightHeigh = altTree(root.right);
+    return 1 + Math.max(leftMax, rightMax);
+  }
+}
+```
 
 ----------------------------------
 ## Grafos
