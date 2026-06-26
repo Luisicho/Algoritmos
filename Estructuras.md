@@ -346,3 +346,12 @@ Esta función elimina los espacios vacios antes y despues de un string
   console.log(recordato2); // Imprime ["luis miguel"]
 
 ```
+### Search
+Busca si una expresion regular se cumple dentro de una cadena, si no es asi retorna `-1`
+```js
+  let cadena = "miguel";
+
+  console.log(cadena.search(`i`)); // Imprime 1
+  console.log(cadena.search(`j`)); // Imprime -1
+
+```
