@@ -13,7 +13,7 @@ El operador `==` es uno llamado "Comparación debil" esta comparación se realiz
   const comparacion1 = 1 == "1" ? false : true; //Arroja True
   const comparacion2 = 1 == 1 ? false : true; //Arroja True
 ```
-
+---------------------
  ## Operador condicional (ternario) y sentencia ifelse
 El _operador condicional ternario_ es un unico operador que usa 3 operandos. Ejecuta la condición del primer operando y dependiendo a este resultado ejecuta una accion u otra. Igualmente a como se utiliza un _ifelse_ statement, el operador ternario compara valores y retorna un resultado, es en el uso pleno de la palabra una "expresion"
 
@@ -30,7 +30,7 @@ La sentencia _ifelse_ es un bloque de control o estructura de control, permite l
     val2
   }
 ```
-
+---------------------
 ## Operador de propagación
 Existe un operador que separa los elemento de un array `...` este operador es una forma sencilla de hacer `split` a un arreglo, el trabajo de `...` es **Propagacion o Desempaquetado** basicamente elimina todo corchete de un arreglo o separa elementos de un string para crear un objeto desempaquetado.
 
@@ -60,7 +60,7 @@ let arr = [1,2,3]
 myfuncion(0, ...arr,4, ...[5]) // los parametros serian myfuncion(0,1,2,3,4,5)
 ```
 
-
+---------------------
 ## Var, Let y Const
 Estas palabras reservadas se utilizan para declarar variables dentro del codigo JavaScript, su uso esta muy relacionado a su _Alcance_ (Scope)
 
@@ -90,7 +90,7 @@ Esta palabra reservada cuenta con un alcance de función, en palabras sencillas 
 ```
 
 De esta manera la palabra reservada `var` crea variables que perduran en una función, cuenta con caracteristicas muy especiales como lo es el __hoisting__ 
-#### Hoisting
+## Hoisting
 Este es un comportamiento del los contextos de ejecución de JavaScript donde las declaraciones de variables y funciones son movidas a la parte superior del codigo para ser ejecutadas primero (de forma coloquial). Tecnicamente las variables y funciones son asignadas a la memoria durante la fase de compilación, esto genera que se puedan utilizar en cualquier parte del codigo y declarar en cualquier parte del codigo o contexto, ya que al ser cargadas con anterioridad en memoria su uso no se limita dentro del codigo.
 
 ```js
@@ -158,3 +158,5 @@ Esta palabra reservada cuenta con un alcance de función y de bloque, esto quier
       console.log(a); // Error no se declaro la variable a
   }
 ```
+---------------------
+## Destructuring
