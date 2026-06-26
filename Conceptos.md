@@ -160,3 +160,59 @@ Esta palabra reservada cuenta con un alcance de función y de bloque, esto quier
 ```
 ---------------------
 ## Destructuring
+Permite desempacar variables de un Array `[]` o propiedades de un objeto `{}` para asignarlos a variables
+```js
+  // Asignar a variables
+  let a,b,rest;
+
+  [a, b] = [10, 20];
+
+  [a, b, rest] = [10, 20, 30, 40, 50];
+
+  console.log(a); // Imprime 10
+  console.log(b); // Imprime 20
+  console.log(rest); // Imprime [30,40,50]
+
+  let arra = [20,30,40,50,60]
+
+  let [c, d, e] = arra;
+
+  console.log(c); // Imprime 20 
+  console.log(d); // Imprime 30 
+  console.log(e); // Imprime 40 
+  
+  // Intercambiar elementos
+
+  let arr = [0,1,2,3,4];
+
+  [arr[0], arr[4]] = [arr[4], arr[0]]; // intercambia 0 y 4 de posición
+
+  console.log(arr); // Imprime [4,1,2,3,0]
+```
+
+Se puede utilizar en funciones para facilitar el uso, asi como tener valores por defecto
+```js
+
+  function mostrarPersona({nombre, apellido, edad, trabajo="ninguno"}){
+    console.log(`nombre: ${nombre} apellido: ${apellido} edad: ${edad} trabajo: ${trabajo}`)
+  }
+
+  persona1 = {
+    nombre: "luis",
+    apellido: "hernandez",
+    edad: 26,
+    trabajo: "programador",
+  }
+
+  persona2 = {
+    nombre: "miguel",
+    apellido: "macias",
+    edad: 26,
+  }
+
+  mostrarPersona(persona1);
+  // Imprime nombre: luis apellido: hernandez edad: 26 trabajo: programador
+  mostrarPersona(persona2);
+  // Imprime nombre: miguel apellido: macias edad: 26 trabajo: ninguno
+
+```
