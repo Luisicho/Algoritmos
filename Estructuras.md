@@ -248,6 +248,17 @@ Uno de los arboles mas comunes son los Binary Tree (Arboles Binarios) estos arbo
 |     | 5  |  | 5  |   |  | 
 |  2   | 3  |   |  1 | 4  |  | 
 |     |   |  |   | 4  |4  | 
+
+Existen formulas ya utilizadas para poder realizar funciones basicas dentro de los arboles binarios, por ejemplo, recorrer un arbol buscando un dato, sumar los datos de un arbol, o intercambiar los nodos de un arbol.
+
+### Buscar
+```js
+
+```
+### Intercambiar
+
+### Suma Total
+
 ----------------------------------
 ## Grafos
 Esta estructura es no lineal y une a objetos para formar estructuras complejas, cuentan con nodos (node) y ramas (edges) solamente que a diferencia de un arbol estos se unen y pueden volverse a unir entre distintos nodos, tecnicamente una lista y un arbol son grafos con caracteristicas delimitadas. Sus ramas pueden ser direccionadas o no direccionadas, asi como tambien pueden ser recursivas que se apunten a si mismas.
