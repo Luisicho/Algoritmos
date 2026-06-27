@@ -104,6 +104,21 @@ Une todos los elementos de un array en una cadena, y devuelve esta cadena nueva 
   console.log(nuevoNombre); // Imprime "luis miguel hernandez"
   
 ```
+### Entries
+Esta funcion retorna un nuevo *array iterator* con las llaver pares de cada objeto
+```js
+  let nombres = ["luis", "miguel", "hernandez"];
+
+  let nuevoArreglo = nombres.estries();
+
+  for (let elemento of nuevoArreglo){
+    console.log(elemento); // Imprime los pares [0, "luis"]  [1, "miguel"]  [2, "hernandez"]
+  }
+
+  // Imprimir con ...
+  console.log([...nuevoArreglo]); // imprime [[0, "luis"]  [1, "miguel"]  [2, "hernandez"]]
+
+```
 ----------------------------------
 ## Linked Lists
 Son similares a un Array ya que siguen guardando listas ordenadas de elementos, sin embargo cuentan con una diferencia grande cuando se habla de almacenar los elementos en memoria, una lista cuenta con algo que se llama apuntador (pointer) es basicamente el elemento que se esta seleccionando o haciendo énfasis dentro de la lista. 
