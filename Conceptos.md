@@ -216,3 +216,10 @@ Se puede utilizar en funciones para facilitar el uso, asi como tener valores por
   // Imprime nombre: miguel apellido: macias edad: 26 trabajo: ninguno
 
 ```
+---------------------
+# Sentencias
+## For...In
+
+## For...Of
+
+
