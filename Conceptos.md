@@ -59,7 +59,26 @@ function myfuncion(x,y,z,a,b,c){}
 let arr = [1,2,3]
 myfuncion(0, ...arr,4, ...[5]) // los parametros serian myfuncion(0,1,2,3,4,5)
 ```
+---------------------
+## Operador de suma y resta
+Estos son operadores unarios, que solamente funcionan con un solo operando, existen con prefijo y sin el, afectan directamente a la variable en cuestion.
 
+```js
+// Operador incremente y preincremento
+let numero = 0;
+
+console.log(numero++) // Imprime 0 despues internamente suma 1 a numero
+// numero vale 1
+console.log(++numero) // Primero internamente sumo 1 a numero, Imprime 2 
+```
+```js
+// Operador decremento y predecremento
+let numero = 2;
+
+console.log(numero--) // Imprime 2 despues internamente resta 1 a numero
+// numero vale 1
+console.log(--numero) // Primero internamente resta 1 a numero, Imprime 0
+```
 ---------------------
 ## Var, Let y Const
 Estas palabras reservadas se utilizan para declarar variables dentro del codigo JavaScript, su uso esta muy relacionado a su _Alcance_ (Scope)
