@@ -219,7 +219,30 @@ Se puede utilizar en funciones para facilitar el uso, asi como tener valores por
 ---------------------
 # Sentencias
 ## For...In
+Esta sentencia de bucle itera sobre las propiedades enumerables de un objeto, este bucle se utiliza comunmente para recorrer objetos.
+```js
+const objeto = {a: 1, b:2, c:3};
 
+for (const propiedad in objeto){
+  console.log(`${propiedad}: ${objeto[propiedad]}`);
+}
+// Imprime
+// `a: 1`
+// `b: 2`
+// `c: 3`
+```
 ## For...Of
+Este es un bucle de sentencia, que itera sobre un objeto iterable, como un Array, String, Map, etc.
 
+```js
+let arr = [1,2,3];
+
+for (const numero of arr) {
+  console.log(numero); // Imprime 1,2,3
+}
+// Agregando un index
+for (const [index, numero] of arr.entries()) {
+  console.log(index + ` numero ` + numero); // Imprime 0 numero 1,1 numero 2,2 numero 3
+}
+```
 
