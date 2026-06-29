@@ -236,6 +236,68 @@ Se puede utilizar en funciones para facilitar el uso, asi como tener valores por
 
 ```
 ---------------------
+## Coerción
+El compilador de _Javascrip_ cuando realiza comparaciones o combinas datos por defecto busca igualar los tipos de variables, esto se evalua dependiendo del operador utilizado, veamos varios ejemplos
+### Suma o concatenacion "+"
+```js
+  let a = 1;
+  let b = "2";
+
+  // Operador "+" suma o concatencación
+  if (a + b == "12"){ // Aqui la coerción cambia a 1 por string y concatena
+    console.log(3); // es verdadera la condicion imprime 3
+  }
+
+  let c = 1 + "2";
+
+  // Suma o concatenación
+  console.log(c) // Imprime "12" la coerción transformo 1 a "1" y concateno a "2"
+
+```
+### Operadores "-, * , /"
+Estos operadores tienden a realizar una coerción a favor de un resultado como numero.
+```js
+  let a = 1;
+  let b = "2";
+
+  // Operador "-" resta
+  if (a - b == 1){ // Aqui la coerción cambia a 2 por numero y resta
+    console.log(true); // es verdadera la condicion imprime true
+  }
+
+  let c = 1 * "2";
+
+  // Multiplicación
+  console.log(c) // Imprime 2 la coerción transformo 2 a numero y multiplica
+
+  let d = 4 / "2";
+
+  // Divición
+  console.log(d) // Imprime 2 la coerción transformo 2 a numero y divide
+
+```
+
+### Truthy o Falsy
+Esta coerción ocurre en condiciones y valida si un dato es falso o verdadero, en contexto normal cualquier valor es verdadero a menos que se defina como falso o pertenesca a `false, 0, "", null, undefined, NaN`
+```js
+  // Truthy
+  if ("Texto"){ // Aqui la coerción cambia a "Texto" por verdadero
+    console.log(true); // es verdadera la condicion imprime true
+  }
+  // Falsy
+  if (null){ // Aqui la coerción cambia a null por falso
+    console.log(true); // es falsa la condicion nunca se imprime true
+  }
+  let a = null;
+  let b = "Texto";
+
+  if(a && b){ // Se evalua a como falso y la condicion nunca entra
+    console.log("Hola") // Nunca imprime "Hola"
+  }
+
+```
+
+---------------------
 # Sentencias
 ## For...In
 Esta sentencia de bucle itera sobre las propiedades enumerables de un objeto, este bucle se utiliza comunmente para recorrer objetos.
