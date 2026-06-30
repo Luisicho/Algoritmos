@@ -1,4 +1,20 @@
 # Conceptos que estudiar de programación JS
+## Prototype
+Javascript utiliza un modelo de objetos basado en prototipos, aqui los objetos heredan propiedades con otros objetos.
+Este actua como un plano que se comparte con todos los objetos del mismo tipo. Las propiedades y metodos añadidos se comparten a todas las instancias,
+```js
+  Object.prototype.print = function () {
+    console.log("Soy funcion de objeto");
+  }
+
+  let a = {
+    nombre: "luis",
+    edad: 26
+  }
+
+  a.print(); // Imprime "Soy funcion de objeto"
+```
+---------------------
 ## Diferencia entre `==` y `===`
 El operador `===` es uno llamado "Comparación estricta" esta comparacion se realiza entre 2 objetos, uno a la izquierda y otro a la derecha, la cualidad principal de esta comparación es que el compilador no se encarga de igualar los tipos de los objetos, toma de base el objeto y lo compará al otro
 
