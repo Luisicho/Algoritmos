@@ -342,4 +342,5 @@ for (const [index, numero] of arr.entries()) {
   console.log(index + ` numero ` + numero); // Imprime 0 numero 1,1 numero 2,2 numero 3
 }
 ```
-
+-------------------
+# EventLoop
