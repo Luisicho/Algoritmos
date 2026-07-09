@@ -365,3 +365,27 @@ console.log("Fin");
 En Javascript no todas las tareas se ejecutan igual, existen micro y macro tareas que son ejecutadas en un momento distinto.
 * **Macrotask:** Estas incluyen timers (setTimeout, setInterval) y I/O Operadores. Se procesan en le orden en como entraron a la cola.
 * **Microtask:** Estan generalmente relacionadas a promesas (.then, .catch) y mutacion por _MutationObserver_. Estas cuentan con procedencia por encima de las _Macrotask_ y se procesaran antes de que el _Eventloop_ retorne los procesos _Macrotask_ 
+
+```js
+console.log("Macro Task 1");
+
+setTimeout(() => {
+    console.log("Macro Task 2");
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log("Micro Task 1");
+}).then(() => {
+    console.log("Micro Task 2");
+});
+
+console.log("Macro Task 3");
+```
+Esto imprime
+```js
+Macro Task 1
+Macro Task 3
+Micro Task 1
+Micro Task 2
+Macro Task 2
+```
