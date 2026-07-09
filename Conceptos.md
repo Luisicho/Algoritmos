@@ -344,3 +344,19 @@ for (const [index, numero] of arr.entries()) {
 ```
 -------------------
 # EventLoop
+Este es un mecanismos que permite a JS ejecutar las tareas en cierto orden, para tener una ejecucion optima
+
+## Call Stack
+Javascript ejecuta una pila de llamadas, que se ordenan y se ejecutan. Javascript es de un solo subproceso, significa que solo se procesa una tarea a la vez dentro del Call _Stack_
+```js
+console.log("Hola");
+function hi() {
+  console.log("Adios");
+}
+hi()
+console.log("Fin");
+```
+* `"Hola"` Se imprime porque esta en _Call Stack_
+* `"hi()"` La funcion se ejecuta y se agrega a _Call Stack_
+* `console.log("Adios");` Se imprime y se agrega a _Call Stack_
+* `"Fin"` Se imprime porque esta en _Call Stack_
