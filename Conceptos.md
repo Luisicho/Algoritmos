@@ -360,3 +360,8 @@ console.log("Fin");
 * `"hi()"` La funcion se ejecuta y se agrega a _Call Stack_
 * `console.log("Adios");` Se imprime y se agrega a _Call Stack_
 * `"Fin"` Se imprime porque esta en _Call Stack_
+
+## Microtask vs Macrotask
+En Javascript no todas las tareas se ejecutan igual, existen micro y macro tareas que son ejecutadas en un momento distinto.
+* **Macrotask:** Estas incluyen timers (setTimeout, setInterval) y I/O Operadores. Se procesan en le orden en como entraron a la cola.
+* **Microtask:** Estan generalmente relacionadas a promesas (.then, .catch) y mutacion por _MutationObserver_. Estas cuentan con procedencia por encima de las _Macrotask_ y se procesaran antes de que el _Eventloop_ retorne los procesos _Macrotask_ 
