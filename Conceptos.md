@@ -344,7 +344,7 @@ for (const [index, numero] of arr.entries()) {
 ```
 -------------------
 # EventLoop
-Este es un mecanismos que permite a JS ejecutar las tareas en cierto orden, para tener una ejecucion optima
+Este es un mecanismos que permite a JS ejecutar las tareas en cierto orden, para tener una ejecucion optima. Se encuentra en medio del _Call Stack_ y el _Callbakc Queue_ y permite colocar el orden de ejecucion de las peticiones microtask y macrotask.
 
 ## Call Stack
 Javascript ejecuta una pila de llamadas, que se ordenan y se ejecutan. Javascript es de un solo subproceso, significa que solo se procesa una tarea a la vez dentro del Call _Stack_
@@ -360,6 +360,9 @@ console.log("Fin");
 * `"hi()"` La funcion se ejecuta y se agrega a _Call Stack_
 * `console.log("Adios");` Se imprime y se agrega a _Call Stack_
 * `"Fin"` Se imprime porque esta en _Call Stack_
+
+### Callback Queue
+Antes de entrar al _Call Stack_ existe el _Event Loop_ que especifica que microtask y macrotask continuarán para ejecutarse, a estas microtask y macrotask juntas se les conoce como _Callback Queue_
 
 ## Microtask vs Macrotask
 En Javascript no todas las tareas se ejecutan igual, existen micro y macro tareas que son ejecutadas en un momento distinto.
