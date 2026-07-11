@@ -434,3 +434,14 @@ Si ejecutamos esto
   cualEsElClima() // Ya se calculó
   // pasan 0ms
 ```
+----------------
+# Closure
+Este es un concepto para utilizar las variables invisibles de objetos:
+Aqui un ejemplo:
+```js
+  let listaPersonas = ["Luis", "Miguel", "Ana", "Karely"]
+  let filtro = "A";
+
+  let persona = listaPersonas.filter(persona => persona.iniciaCon(filtro)); // Retorna "Ana"
+```
+Aqui la clave esta en `persona.iniciaCon(filtro))` ya que esta funcion de _persona_ utiliza a `filtro` que es una variable fuera de su contexto real o su funcion.
