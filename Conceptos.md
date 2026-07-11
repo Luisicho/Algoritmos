@@ -392,3 +392,45 @@ Micro Task 1
 Micro Task 2
 Macro Task 2
 ```
+----------------------
+# Memoization
+Esta es una tecnica de programación que ayuda a mejorar los tiempo de ejecución de un programa, memoriza un parametro y ayuda a que una ejecucion de una funcion no sea repetida a menos que sea necesario un ejemplo puede ser el clima:
+Imaginemos que tenemos un paquete npm que nos brinda todos los climas del mundo, dura 100ms en responder siempre
+```js
+  function cualEsElClima(){
+    let  result = mirarClima() // Aqui magicamente conseguimos el clima
+    console.log(result);
+  }
+```
+Si ejecutamos esto 
+```js
+  cualEsElClima() // Responde el clima
+  // pasan 100ms
+  cualEsElClima() // Responde el clima
+  // pasan 100ms
+```
+Si ejecutamos esta funcion constantemente podemos llegar a tener un error en las peticiones, porque la espera de 100ms si se acumula puede llegar a ser eterna, para esto utilizamos el Memoization:
+```js
+  let fueCalculado = false;
+  let ultimoResultado;
+  function cualEsElClima() {  
+    if(fueCalculado){
+      // Ya se calculo esta en la memoria (se levanta la vandera que ya se calculó)
+      return ultimoResultado;
+    }
+    let resultado = mirarClima() // Aqui magicamente conseguimos el clima
+
+    ultimoResultado = resultado;
+    fueCalculado = true;
+
+    return resultado;
+  }
+  
+```
+Si ejecutamos esto 
+```js
+  cualEsElClima() // Responde el clima
+  // pasan 100ms
+  cualEsElClima() // Ya se calculó
+  // pasan 0ms
+```
