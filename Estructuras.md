@@ -119,6 +119,14 @@ Esta funcion retorna un nuevo *array iterator* con las llaver pares de cada obje
   console.log([...nuevoArreglo]); // imprime [[0, "luis"]  [1, "miguel"]  [2, "hernandez"]]
 
 ```
+### Includes
+Esta función retorna **true** o **false** segun si se encuentra el valor o no
+```js
+  let arr = ["a","b","c"];
+
+  console.log(arr.includes("a")); // Imprime true
+  console.log(arr.includes("d")); // Imprime false
+```
 ----------------------------------
 ## Linked Lists
 Son similares a un Array ya que siguen guardando listas ordenadas de elementos, sin embargo cuentan con una diferencia grande cuando se habla de almacenar los elementos en memoria, una lista cuenta con algo que se llama apuntador (pointer) es basicamente el elemento que se esta seleccionando o haciendo énfasis dentro de la lista. 
