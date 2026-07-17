@@ -468,3 +468,27 @@ Busca si una expresion regular se cumple dentro de una cadena, si no es asi reto
   console.log(cadena.search(`j`)); // Imprime -1
 
 ```
+### padStart, padEnd
+Esta función agrega el numero x de caracteres al inicio o fin de un _String_, **Importante** se cambia el tamaño del string en base al parametro que se mande
+```js
+  let cadena = "miguel";
+
+  cadena = cadena.padStart(3,"a"); // Cuidado cadena es mayor a 3
+
+  console.log(cadena); // miguel Porque el length de cadena es mayor a 3
+
+  cadena = cadena.padStart(9,"a"); 
+
+  console.log(cadena); // aaamiguel Se agregaron los string en el espacio que faltó
+```
+```js
+  let cadena = "miguel";
+
+  cadena = cadena.padEnd(3,"b"); // Cuidado cadena es mayor a 3
+
+  console.log(cadena); // miguel Porque el length de cadena es mayor a 3
+
+  cadena = cadena.padEnd(9,"b"); 
+
+  console.log(cadena); // miguelbbb Se agrego los caracteres que faltaron para completar el length
+```
